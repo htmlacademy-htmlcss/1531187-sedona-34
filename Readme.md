@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Semyon Dyagelets](https://up.htmlacademy.ru/htmlcss/34/user/1531187).
-* Наставник: `Антон Попов`.
+* Наставник: [Антон Попов](https://htmlacademy.ru/profile/joker)
 
 ---
 
