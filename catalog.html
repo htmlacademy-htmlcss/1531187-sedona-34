@@ -40,10 +40,10 @@
   <main class="main-catalog">
     <section class="catalog-search">
       <h1 class="catalog-title">Гостиницы Седоны</h1>
-      <nav class="breadcrumbss">
-        <ul class="breadcrumbss-list">
-          <li class="breadcrumbss-item">
-            <a class="breadcrumbss-link" href="./index.html"><span class="visually-hidden">Home</span></a>
+      <nav class="breadcrumbs">
+        <ul class="breadcrumbs-list">
+          <li class="breadcrumbs-item">
+            <a class="breadcrumbs-link" href="./index.html"><span class="visually-hidden">Home</span></a>
           </li>
           <li class="breadcrumbs-item">
             <a class="breadcrumbs-link" href="#">Гостиницы</a>
@@ -65,9 +65,9 @@
         </fieldset>
         <fieldset class="search-fieldset">
           <legend class="search-filter">Стоимость, ₽:</legend>
-          <label><input type="number" name="price-set" min="0" max="10000" placeholder="от" /><span
+          <label><input type="number" name="price-set" min="0" max="10000" value="0" placeholder="от" /><span
               class="visually-hidden">от</span></label>
-          <label><input type="number" name="price-set" min="0" max="10000" placeholder="до" /><span
+          <label><input type="number" name="price-set" min="0" max="10000" value="9000"placeholder="до" /><span
               class="visually-hidden">до</span></label>
           <label><input type="range" min="0" max="10000" step="100" /><span
               class="visually-hidden">установить цену</span></label>
@@ -91,8 +91,8 @@
         <h3 class="hotel-name">Amara Resort & Spa</h3>
         <p class="hotel-type">Гостиница</p>
         <span class="hotel-price">От 4000 ₽</span>
-        <button class="hotel-details" type="button">подробнее</button>
-        <button class="hotel-favorite" type="button">в избранное</button>
+        <a class="button hotel-details" href="#">подробнее</a>
+        <a class="button hotel-favorite">в избранное</a>
         <img class="hotel-star" src="#" alt="4 звезды">
         <span class="hotel-rating">Рейтинг: 8,5</span>
       </article>
@@ -101,8 +101,8 @@
         <h3 class="hotel-name">Villas at Poco Diablo</h3>
         <p class="hotel-type">Гостиница</p>
         <span class="hotel-price">От 5000 ₽</span>
-        <button class="hotel-details" type="button">подробнее</button>
-        <button class="hotel-favorite" type="button">в избранное</button>
+        <a class="button hotel-details" href="#">подробнее</a>
+        <a class="button hotel-favorite">в избранное</a>
         <img class="hotel-star" src="#" alt="4 звезды">
         <span class="hotel-rating">Рейтинг: 9,2</span>
       </article>
@@ -111,8 +111,8 @@
         <h3 class="hotel-name">Desert Quail Inn</h3>
         <p class="hotel-type">Гостиница</p>
         <span class="hotel-price">От 2500 ₽</span>
-        <button class="hotel-details" type="button">подробнее</button>
-        <button class="hotel-favorite" type="button">в избранное</button>
+        <a class="button hotel-details" href="#">подробнее</a>
+        <a class="button hotel-favorite">в избранное</a>
         <img class="hotel-star" src="#" alt="3 звезды">
         <span class="hotel-rating">Рейтинг: 6,9</span>
       </article>
@@ -121,16 +121,13 @@
         <h3 class="hotel-name">GreenTree Inn</h3>
         <p class="hotel-type">Гостиница</p>
         <span class="hotel-price">От 1500 ₽</span>
-        <button class="hotel-details" type="button">подробнее</button>
-        <button class="hotel-favorite" type="button">в избранное</button>
+        <a class="button hotel-details" href="#">подробнее</a>
+        <a class="button hotel-favorite">в избранное</a>
         <img class="hotel-star" src="#" alt="2 звезды">
         <span class="hotel-rating">Рейтинг: 5,0</span>
       </article>
       <ul class="pagination">
         <li class="pagination-item">
-          <a class="pagination-link pagination-prev pagination-disabled">
-            <span class="visually-hidden">Предыдущая страница</span>
-          </a>
         </li>
         <li class="pagination-item">
           <a class="pagination-link pagination-current">1</a>
