@@ -15,7 +15,8 @@
 }
 
 :root {
-  --background-color-basic-2: #FFFFFF;
+  --background-color-body: #F2F2F2;
+  --background-color-basic-1: #FFFFFF;
   --background-color-basic-3: #82B3D3;
   --background-color-secondary-1: #83B3D31E;
   --background-color-secondary-2: #83B3D333;
@@ -31,11 +32,20 @@
   --text-color-error: #FF5757;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
 body {
+  margin: 0;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 22px;
   line-height: 26px;
-  background-color: var(--background-color-basic-2);
+  background-color: var(--background-color-body);
   color: var(--text-color-basic);
 }
 
@@ -57,14 +67,36 @@ ol {
   padding: 0;
 }
 
+.advantages-item-expanded-wrapper {
+  display: flex;
+}
 
 /* ADVANTAGES */
 .advantages-intro {
   text-align: center;
+  padding: 63px 273px 90px;
+}
+
+.advantages-item-container {
+  width: 400px;
+  padding: 100px 85px;
+}
+
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .advantages-description {
   color: var(--text-color-secondary);
+}
+
+.advantages-title {
+  margin-bottom: 30px;
+}
+
+.advantages-item-title {
+  margin-bottom: 30px;
 }
 
 .advantages-item {
@@ -80,14 +112,18 @@ ol {
 }
 
 .advantages-item-accent {
+  width: 100%;
   color: var(--text-color-onbackground);
 }
 
 .advantages-item-accent-container {
+  padding: 92px 85px;
   background-color: var(--background-color-basic-3);
 }
 
 .advantages-item-number {
+  display: block;
+  margin-bottom: 30px;
   font-size: 18px;
   line-height: 21px;
 }
@@ -100,6 +136,10 @@ ol {
 
 .advantages-item-description-accent {
   color: var(--text-color-onbackground);
+}
+
+.breadcrumbs-list {
+  display: flex;
 }
 
 .breadcrumbs-link {
@@ -157,9 +197,14 @@ ol {
 
 /* CATALOG */
 .catalog-search {
+  padding: 35px 70px;
   color: var(--text-color-onbackground);
   background-image: url('../images/background-mountains_blurred.jpg');
   background-repeat: no-repeat;
+}
+
+.catalog-searchbox {
+  display: flex;
 }
 
 /* FOOTER */
@@ -240,20 +285,55 @@ ol {
 
 /* INVITATION */
 .invitation {
+  display: flex;
+  flex-direction: column;
+  padding: 90px 313px;
   text-align: center;
 }
 
+.invitation-title {
+  margin-bottom: 30px;
+}
+
 .invitation-disclaimer {
+  margin-bottom: 55px;
   color: var(--text-color-secondary);
 }
 
+.main-container {
+  flex-grow: 1;
+}
+
 /* NAVIGATION */
+.navigation {
+  width: calc(100% - 70px*2);
+  display: flex;
+  margin: 0 auto;
+}
+
 .navigation-link {
   color: var(--text-color-basic);
 }
 
+.navigation-list {
+  display: flex;
+}
+
+.navigation-links {
+  margin-right: auto;
+}
+
+.navigation-links .navigation-item:not(:last-child) {
+  margin-right: 30px
+}
+
+.navigation-user .navigation-item:not(:last-child) {
+  margin-right: 25px
+}
+
 /* NEWSLETTER */
 .newsletter {
+  padding: 94px 200px;
   text-align: center;
 }
 
@@ -263,10 +343,41 @@ ol {
   background-repeat: no-repeat;
 }
 
+.newsletter-disclaimer {
+  margin-bottom: 45px;
+}
+
 .newsletter-form-input {
   background-color: var(--form-element-secondary-background);
   font-size: 18px;
   line-height: 21px;
+}
+
+.newsletter-title {
+  margin-bottom: 30px;
+}
+
+.page-container {
+  width: 1200px;
+  background-color: var(--background-color-basic-1);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-header-logo {
+  margin-right: 30px;
+}
+
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 70px 30px;
+}
+
+.pagination {
+  display: flex;
 }
 
 .pagination-link {
@@ -286,22 +397,29 @@ ol {
 
 /* RECOMMENDATIONS */
 .recommendations-item {
+  width: calc(100% / 3);
+  padding: 80px 85px;
   text-align: center;
   background-color: var(--background-color-secondary-1);
 }
 
 .recommendations-item-center {
-  background-color: var(--background-color-basic-2);
+  background-color: var(--background-color-basic-1);
 }
 
 .recommendations-title {
   color: var(--text-color-basic);
+  margin-bottom: 30px;
 }
 
 .recommendations-description {
   font-size: 18px;
   line-height: 21px;
   color: var(--text-color-secondary);
+}
+
+.recommendations-list {
+  display: flex;
 }
 
 /* SEARCH */
@@ -312,12 +430,34 @@ ol {
   text-transform: capitalize;
 }
 
+.search-fieldset {
+  border-style: none;
+}
+
 .search-label {
   font-size: 18px;
   line-height: 21px;
+}
+
+.search-results {
+  padding: 50px 70px 25px;
 }
 
 .welcome {
   background-image: url(../images/background-canyon.jpg);
   background-repeat: no-repeat;
 }
+
+
+/* .visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+} */
