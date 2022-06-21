@@ -26,6 +26,9 @@
   --form-element-primary-color: #E5E5E5;
   --form-element-secondary-background: #F2F2F2;
   --form-input-background: #3F5E72;
+  --icon-color-basic: #000000;
+  --icon-color-secondary: #83B3D3;
+  --icon-color-text: #7DB54F;
   --text-color-basic: #000000;
   --text-color-secondary: #333333;
   --text-color-onbackground: #FFFFFF;
@@ -154,12 +157,22 @@ input {
 
 .breadcrumbs-list {
   display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .breadcrumbs-link {
+  display: block;
   font-size: 16px;
   line-height: 21px;
   color: var(--text-color-background);
+}
+
+.breadcrumbs-link-home {
+  width: 12px;
+  height: 12px;
+  background-image: url("../images/icons/home.svg");
+  background-position: center;
 }
 
 /* BUTTON */
@@ -306,6 +319,7 @@ button:hover,
 
 .footer-social-list {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .heading-1 {
@@ -366,7 +380,7 @@ button:hover,
   border-radius: 30px;
   background-color: #FFFF;
   z-index: 1;
-  /* display: none; */
+  display: none;
 }
 
 .hotels-search-modal-container {
@@ -445,6 +459,21 @@ button:hover,
   background-color: var(--form-element-secondary-background);
 }
 
+.icon-accomodation {
+  background-image: url("../images/icons/house.svg");
+}
+
+.icon-accomodation > svg > path{
+  fill: red;
+}
+
+.icon-food {
+  background-image: url("../images/icons/burger.svg");
+}
+
+.icon-souvenirs {
+  background-image: url("../images/icons/gift.svg");
+}
 
 /* INVITATION */
 .invitation {
@@ -474,6 +503,12 @@ button:hover,
   margin: 0 auto;
 }
 
+.navigation-button-action {
+  display: block;
+  min-width: 160px;
+  margin-left: 20px;
+}
+
 .navigation-link {
   color: var(--text-color-basic);
 }
@@ -481,18 +516,36 @@ button:hover,
 .navigation-list {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+}
+
+.navigation-links .navigation-item:not(:last-child) {
+  margin-right: 34px;
 }
 
 .navigation-links {
   margin-right: auto;
+  padding: 20px 17px;
 }
 
-.navigation-links .navigation-item:not(:last-child) {
-  margin-right: 30px
+.navigation-link-search {
+  background-image: url("../images/icons/search.svg");
 }
 
-.navigation-user .navigation-item:not(:last-child) {
-  margin-right: 25px
+.navigation-logo {
+  margin-right: 30px;
+}
+
+.navigation-link-favorites {
+  background-image: url("../images/icons/like.svg");
+}
+
+.navigation-user .navigation-link {
+  display: block;
+  width: 42px;
+  height: 66px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* NEWSLETTER */
@@ -542,7 +595,7 @@ button:hover,
 }
 
 .page-header-logo {
-  margin-right: 30px;
+  display: block;
 }
 
 .page-footer {
@@ -585,6 +638,10 @@ button:hover,
 
 /* RECOMMENDATIONS */
 .recommendations-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
   width: calc(100% / 3);
   padding: 80px 85px;
   text-align: center;
@@ -597,7 +654,6 @@ button:hover,
 
 .recommendations-title {
   color: var(--text-color-basic);
-  margin-bottom: 30px;
 }
 
 .recommendations-description {
@@ -606,9 +662,21 @@ button:hover,
   color: var(--text-color-secondary);
 }
 
+.recommendations-item-icon {
+  width: 75px;
+  height: 72px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.recommendations-item-icon > svg {
+  fill: red;
+}
+
 .recommendations-list {
   display: flex;
 }
+
 
 /* SEARCH */
 .searchbox-button-apply {
