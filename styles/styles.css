@@ -519,13 +519,19 @@ button:hover,
   flex-wrap: wrap;
 }
 
-.navigation-links .navigation-item:not(:last-child) {
-  margin-right: 34px;
+.navigation-links {
+  align-items: flex-end;
+  margin-right: auto;
+  padding: 0 17px;
+  gap: 34px;
 }
 
-.navigation-links {
-  margin-right: auto;
-  padding: 20px 17px;
+.navigation-link {
+  display: inline-block;
+  padding-bottom: 20px;
+}
+.navigation-link-current {
+  border-bottom: 2px solid #756257;
 }
 
 .navigation-link-search {
@@ -579,6 +585,10 @@ button:hover,
   line-height: 21px;
   border-radius: 10px 0 0 10px;
   padding: 20px 22px;
+}
+
+.newsletter-form-input::placeholder {
+  color:#00000099;
 }
 
 .newsletter-title {
