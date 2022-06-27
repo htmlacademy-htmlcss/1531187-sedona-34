@@ -21,17 +21,29 @@
   --background-color-secondary-1: #83B3D31E;
   --background-color-secondary-2: #83B3D333;
   --button-color-basic: #756157;
+  --button-color-basic-hover: #615048;
   --button-color-secondary: #82B3D3;
+  --button-color-secondary-hover: #68A2CA;
   --button-color-selected: #7DB54F;
+  --button-color-selected-hover: #6C9E42;
+  --button-color-disabled: #E5E5E5;
   --form-element-primary-color: #E5E5E5;
   --form-element-secondary-background: #F2F2F2;
   --form-input-background: #3F5E72;
   --icon-color-basic: #000000;
   --icon-color-secondary: #83B3D3;
+  --icon-color-secondary-hover: #68A2CA;
+  --icon-color-secondary-active: #68a2ca4d;
   --icon-color-text: #7DB54F;
+  --input-border-color: #E5E5E5;
+  --input-border-color-hover: #68A2CA;
+  --input-border-color-active: #3F5E72;
+  --input-border-color-disabled: #0000004d;
   --text-color-basic: #000000;
   --text-color-secondary: #333333;
   --text-color-onbackground: #FFFFFF;
+  --text-color-onbackground-hover: #ffffff99;
+  --text-color-active: #ffffff4d;
   --text-color-error: #FF5757;
 }
 
@@ -85,6 +97,10 @@ input {
 
 .advantages-item-container {
   padding: 100px 85px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: center;
 }
 
 .advantages-item-expanded-wrapper {
@@ -108,14 +124,6 @@ input {
   margin-bottom: 30px;
 }
 
-.advantages-item-title {
-  margin-bottom: 30px;
-}
-
-.advantages-item {
-  text-align: center;
-}
-
 .advantages-item-standard {
   background-color: var(--background-color-secondary-1);
 }
@@ -135,8 +143,6 @@ input {
 }
 
 .advantages-item-number {
-  display: block;
-  margin-bottom: 30px;
   font-size: 18px;
   line-height: 21px;
 }
@@ -155,9 +161,19 @@ input {
   margin-bottom: 40px;
 }
 
+.breadcrumbs-item {
+  display: flex;
+  align-items: flex-end;
+}
+
+.breadcrumbs-item:not(:last-child)::after {
+  margin: 0 10px;
+  content: url("../images/icons/breadcrumbs.svg");
+}
+
 .breadcrumbs-list {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   flex-wrap: wrap;
 }
 
@@ -168,11 +184,12 @@ input {
   color: var(--text-color-background);
 }
 
-.breadcrumbs-link-home {
-  width: 12px;
-  height: 12px;
-  background-image: url("../images/icons/home.svg");
-  background-position: center;
+.breadcrumbs-link:hover {
+  color: var(--text-color-onbackground-hover);
+}
+
+.breadcrumbs-link:active {
+  color: var(--text-color-active);
 }
 
 /* BUTTON */
@@ -190,16 +207,35 @@ button:hover,
   cursor: pointer;
 }
 
+.button:active {
+  color: var(--text-color-active);
+}
+
 .button-basic-color {
   background-color: var(--button-color-basic);
+}
+
+.button-basic-color:hover,
+.button-basic-color:focus {
+  background-color: var(--button-color-basic-hover);
 }
 
 .button-secondary-color {
   background-color: var(--button-color-secondary);
 }
 
+.button-secondary-color:hover,
+.button-secondary-color:focus {
+  background-color: var(--button-color-secondary-hover);
+}
+
 .button-selected {
   background-color: var(--button-color-selected);
+}
+
+.button-selected:hover,
+.button-selected:focus {
+  background-color: var(--button-color-selected-hover);
 }
 
 .button-big {
@@ -262,6 +298,7 @@ button:hover,
   border: 2px solid #68A2CA;
 }
 
+.button-view-toggler:active,
 .button-view-toggler-selected {
   border: 2px solid #000000;
 }
@@ -309,7 +346,7 @@ button:hover,
   font-style: normal;
 }
 
-.footer-address-phone {
+.footer-contacts {
   font-size: 40px;
   line-height: 40px;
   color: var(--text-color-basic);
@@ -317,11 +354,30 @@ button:hover,
   text-transform: uppercase;
 }
 
+.footer-contacts:hover,
+.footer-contacts:focus {
+  color: #756157;
+}
+
+.footer-contacts:active {
+  color: #7561574d;
+}
+
 .footer-social-list {
   display: flex;
   flex-wrap: wrap;
 }
 
+.footer-social-link {
+  color: var(--icon-color-secondary);
+}
+
+.footer-social-link:hover,
+.footer-social-link:focus {
+  color: var(--icon-color-secondary-hover);
+}
+
+/* HEADING */
 .heading-1 {
   font-weight: 700;
   font-size: 60px;
@@ -356,6 +412,32 @@ button:hover,
   text-transform: capitalize;
 }
 
+/* HOTEL */
+.hotel-star {
+  align-self: center;
+}
+
+.hotel-star::after {
+  display: block;
+  content: '';
+  background-image: url('../images/icons/star.svg');
+  background-repeat: repeat-x;
+  width: 20px;
+  height: 20px;
+}
+
+.hotel-star-2:after {
+  width: 40px;
+}
+
+.hotel-star-3:after {
+  width: 60px;
+}
+
+.hotel-star-4:after {
+  width: 80px;
+}
+
 .hotels-amount-select {
   width: 160px;
   padding: 14px 20px;
@@ -383,7 +465,7 @@ button:hover,
   display: none;
 }
 
-.hotels-search-modal-container {
+.hotels-search-modal-content {
   display: grid;
   grid-template-columns: 155px 133px 155px 133px;
   row-gap: 40px;
@@ -509,10 +591,6 @@ button:hover,
   margin-left: 20px;
 }
 
-.navigation-link {
-  color: var(--text-color-basic);
-}
-
 .navigation-list {
   display: flex;
   align-items: center;
@@ -526,12 +604,14 @@ button:hover,
   gap: 34px;
 }
 
-.navigation-link {
-  display: inline-block;
-  padding-bottom: 20px;
+.navigation-links .navigation-link {
+    display: inline-block;
+    padding-bottom: 20px;
+    color: var(--text-color-basic);
 }
+
 .navigation-link-current {
-  border-bottom: 2px solid #756257;
+  box-shadow: inset 0px -2px 0px 0px #756257;
 }
 
 .navigation-link-search {
