@@ -35,6 +35,10 @@
   --icon-color-secondary-hover: #68A2CA;
   --icon-color-secondary-active: #68a2ca4d;
   --icon-color-text: #7DB54F;
+  --input-border-color: #E5E5E5;
+  --input-border-color-hover: #68A2CA;
+  --input-border-color-active: #3F5E72;
+  --input-border-color-disabled: #0000004d;
   --text-color-basic: #000000;
   --text-color-secondary: #333333;
   --text-color-onbackground: #FFFFFF;
@@ -368,14 +372,12 @@ button:hover,
   color: var(--icon-color-secondary);
 }
 
-.footer-social-link:hover {
+.footer-social-link:hover,
+.footer-social-link:focus {
   color: var(--icon-color-secondary-hover);
 }
 
-/* .footer-social-icon {
-  fill: var(--icon-color-secondary);
-} */
-
+/* HEADING */
 .heading-1 {
   font-weight: 700;
   font-size: 60px;
@@ -410,6 +412,7 @@ button:hover,
   text-transform: capitalize;
 }
 
+/* HOTEL */
 .hotel-star {
   align-self: center;
 }
