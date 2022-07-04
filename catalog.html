@@ -31,8 +31,10 @@
             <a class="navigation-link navigation-link-search" href="#"><span class="visually-hidden">Поиск</span></a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link navigation-link-favorites" href="#"><span
-                class="visually-hidden">Избранное</span></a>
+            <a class="navigation-link navigation-link-favorites" href="#">
+              <span class="visually-hidden">Избранное</span>
+              <span class="favourites-amount">12</span>
+            </a>
           </li>
           <li class="navigation-item">
             <a class="button button-basic-color button-small navigation-button-action" href="catalog.html">Хочу
@@ -44,7 +46,7 @@
 
     <main class="main-container main-catalog">
       <section class="catalog-search">
-        <h1 class="catalog-title heading-1">Гостиницы Седоны</h1>
+        <h1 class="heading-1 catalog-title">Гостиницы Седоны</h1>
         <nav class="breadcrumbs">
           <ul class="breadcrumbs-list">
             <li class="breadcrumbs-item">
@@ -85,13 +87,25 @@
             <fieldset class="search-fieldset search-fieldset-price">
               <legend class="search-filter">Стоимость, ₽:</legend>
               <div class="search-filter-price-range-container">
-                <label><input type="number" name="price-set" min="0" max="10000" value="0" placeholder="от" /><span
-                    class="visually-hidden">от</span></label>
-                <label><input type="number" name="price-set" min="0" max="10000" value="9000" placeholder="до" /><span
-                    class="visually-hidden">до</span></label>
+                <div class="price-input-container">
+                <input class="price-input" type="number" min="0" max="9999" value="0"></input>
+                <span class="price-set">от</span>
               </div>
-              <label><input type="range" /><span class="visually-hidden">установить
-                  цену</span></label>
+              <div class="price-input-container">
+                <input class="price-input" type="number" min="1" max="10000" value="9000"></input>
+                <span class="price-set">до</span>
+              </div>
+              </div>
+              <div class="search-filter-price-slider">
+                <label>
+                  <span class="visually-hidden">установить
+                    цену</span>
+                  <div class="search-filter-range-container">
+                    <input type="range" min="0" max="9000" value="0" id="lower">
+                    <input type="range" min="0" max="10000" value="9000" id="upper">
+                  </div>
+                </label>
+              </div>
             </fieldset>
             <div class="searchbox-buttons-container">
               <input class="button button-small button-secondary-color searchbox-button-apply" type="submit"
@@ -106,7 +120,7 @@
           <h2 class="search-results-title heading-2">Найдено гостиниц: 38</h2>
           <div class="search-results-sorting-container">
             <label class="visually-hidden" for="price-select">Сортировать по цене</label>
-            <select class="search-results-price" name="price" id="price-select">
+            <select class="select search-results-price" name="price" id="price-select">
               <option class="hotels-option" value="cheap">Сначала дешёвые</option>
               <option class="hotels-option" value="expensive">
                 Сначала дорогие
@@ -190,7 +204,7 @@
             </li>
           </ul>
           <label class="hotels-amount-show" for="amount-select">Гостиниц на странице:</label>
-          <select class="hotels-amount-select" name="hotels-amount" id="amount-select">
+          <select class="select hotels-amount-select" name="hotels-amount" id="amount-select">
             <option class="hotels-option" value="4">4</option>
             <option class="hotels-option" value="8">8</option>
           </select>
