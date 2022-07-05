@@ -216,51 +216,61 @@
       </a>
     </footer>
   </div>
-    <form class="hotels-search-modal modal-closed" action="https://echo.htmlacademy.ru" method="post">
-      <h2 class="heading-2 hotels-search-modal-title">Поиск гостиницы в&nbsp;Седоне</h2>
-      <button type="button" class="button-close"></button>
-      <div class="hotels-search-modal-content">
-
-        <label class="heading-4 hotel-search-modal-label" for="arrival-date">Дата заезда:</label>
-        <div class="date-input-container">
+  <form class="hotels-search-modal modal-closed" action="https://echo.htmlacademy.ru" method="post">
+    <h2 class="heading-2 hotels-search-modal-title">Поиск гостиницы в&nbsp;Седоне</h2>
+    <button type="button" class="button-close"></button>
+    <div class="hotels-search-modal-content">
+      <label class="heading-4 hotel-search-modal-label" for="arrival-date">Дата заезда:</label>
+      <div class="date-input-container">
         <input class="hotels-search-input input-date" type="text" name="arrival-date" id="arrival-date"
           placeholder="Укажите дату" value="27 апреля 2020" required />
         <span class="input-comment input-error">Мы не можем отправить вас в прошлое.</span>
       </div>
-        <label class="heading-4 hotel-search-modal-label" for="departure-date">Дата выезда:</label>
-        <div class="date-input-container">
-        <input class="hotels-search-input input-date" type="text" name="departure-date" id="departure-date" placeholder="Укажите дату" value="1 сентября 2021" required />
+      <label class="heading-4 hotel-search-modal-label" for="departure-date">Дата выезда:</label>
+      <div class="date-input-container">
+        <input class="hotels-search-input input-date" type="text" name="departure-date" id="departure-date"
+          placeholder="Укажите дату" value="1 сентября 2021" required />
         <span class="input-comment">На эти даты есть свободные номера. Пока есть.</span>
       </div>
-        <label class="heading-4 hotel-search-modal-label" for="adults">Взрослые:</label>
-        <div class="hotels-search-input-container">
-          <button class="button button-amount-set decrease">
-            <svg width="21" height="20" viewBox="0 0 21 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M3.11 9v2h14V9h-14Z" fill="currentColor"/></svg>
-          </button>
-          <input class="hotels-search-input" type="number" min="1" max="8" step="1" name="adults" id="adults" placeholder="2"
-            required />
-          <button class="button button-amount-set increase">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" fill="#currentColor"/></svg>
-          </button>
-        </div>
-        <label class="heading-4 hotel-search-modal-label label-children" min="0" max="8" step="1" for="children">Дети:
-          <span class="label-information">
-            <p class="label-information-tooltip">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</p>
-          </span>
-        </label>
-        <div class="hotels-search-input-container">
-          <button class="button button-amount-set decrease">
-            <svg width="21" height="20" viewBox="0 0 21 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M3.11 9v2h14V9h-14Z" fill="currentColor"/></svg>
-          </button>
-          <input class="hotels-search-input" type="number" min="1" max="8" step="1" name="children" id="children" placeholder="1"/>
-          <button class="button button-amount-set increase">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" fill="#currentColor"/></svg>
-          </button>
-        </div>
-        <button type="submit" class="button button-big button-secondary-color hotels-search-submit">Найти</button>
+      <label class="heading-4 hotel-search-modal-label" for="adults">Взрослые:</label>
+      <div class="hotels-search-input-container">
+        <button class="button button-amount-set decrease">
+          <svg width="21" height="20" viewBox="0 0 21 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.11 9v2h14V9h-14Z" fill="currentColor" />
+          </svg>
+        </button>
+        <input class="hotels-search-input" type="number" min="1" max="8" step="1" name="adults" id="adults"
+          placeholder="2" required />
+        <button class="button button-amount-set increase">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" fill="#currentColor" />
+          </svg>
+        </button>
       </div>
-    </form>
-    <div class="modal-overlay modal-closed"></div>
+      <label class="heading-4 hotel-search-modal-label label-children" for="children">Дети:
+        <div class="label-information">
+          <p class="label-information-tooltip">Укажите количество детей, которые будут с вами, возраст которых от 6 до
+            18 лет. Дети до 6 лет размещаются бесплатно.</p>
+          </div>
+      </label>
+      <div class="hotels-search-input-container">
+        <button class="button button-amount-set decrease">
+          <svg width="21" height="20" viewBox="0 0 21 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3.11 9v2h14V9h-14Z" fill="currentColor" />
+          </svg>
+        </button>
+        <input class="hotels-search-input" type="number" min="1" max="8" step="1" name="children" id="children"
+          placeholder="1" />
+        <button class="button button-amount-set increase">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" fill="#currentColor" />
+          </svg>
+        </button>
+      </div>
+      <button type="submit" class="button button-big button-secondary-color hotels-search-submit">Найти</button>
+    </div>
+  </form>
+  <div class="modal-overlay modal-closed"></div>
 </body>
 
 </html>
