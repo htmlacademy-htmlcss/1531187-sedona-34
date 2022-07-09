@@ -359,6 +359,7 @@ button:hover,
 .catalog-search {
   padding: 35px 70px 70px;
   color: var(--text-color-onbackground);
+  background-color: var(--background-color-basic-3);
   background-image: url("../images/background-mountains_blurred.jpg");
   background-repeat: no-repeat;
 }
@@ -899,6 +900,7 @@ button:hover,
 
 .newsletter-with-background {
   color: var(--text-color-onbackground);
+  background-color: var(--background-color-basic-3);
   background-image: url("../images/background-mountains_blurred.jpg");
   background-repeat: no-repeat;
 }
@@ -1308,6 +1310,7 @@ button:hover,
   position: relative;
   text-align: center;
   padding: 51px 0 82px;
+  background-color: #31434d;
   background-image: url("../images/background-canyon.jpg");
   background-repeat: no-repeat;
   background-size: cover;
